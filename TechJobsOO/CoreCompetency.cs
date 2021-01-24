@@ -13,30 +13,30 @@ namespace TechJobsOO
         public string Value { get; set; }
         public CoreCompetency()
         {
-            id = nextId;
+            this.Id = nextId;
             nextId++;
         }
 
         public CoreCompetency(string v) : this()
         {
-            value = v;
+            this.Value = v;
         }
 
         public override bool Equals(object obj)
         {
             return obj is CoreCompetency competency &&
-                   id == competency.id;
+                   this.Id == competency.Id;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(id);
+            return HashCode.Combine(this.Id);
         }
 
         public override string ToString()
         {
-            return value;
+            return this.Value;
         }
     }
-    }
 }
+
